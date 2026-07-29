@@ -2,7 +2,7 @@ local runtime = require("talkcan.runtime")
 local log = require("talkcan.log")
 local channel = require("talkcan.channel")
 
-local release_marker = "1.3.0"
+local release_marker = "1.3.1"
 
 local function typed_runtime_code(failure, fallback)
     if type(failure) == "table" and type(failure.error) == "string" and failure.error ~= "" then
