@@ -1,7 +1,10 @@
 PACKAGE := talkcan-channel.zip
 LUA_SOURCES := $(shell find lua -type f -name '*.lua' -print | LC_ALL=C sort)
 
-.PHONY: package clean
+.PHONY: package clean test
+
+test:
+	lua tests/plugin_test.lua
 
 package: $(PACKAGE)
 
